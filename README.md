@@ -38,7 +38,7 @@ Los ficheros que no han cambiado no se copian a la nueva versión... ¡ni siquie
   > Es una copia completa del historial de versiones del proyecto. Contiene información suficiente para reconstruir cualquier versión del mismo.
 
 * Repositorio local
- > Es una copia completa del repositorio remoto. Al igual que el repositorio remoto, contiene toda la información del proyecto.
+  > Es una copia completa del repositorio remoto. Al igual que el repositorio remoto, contiene toda la información del proyecto.
 
 * Workspace, working directory, working tree, ...
   > Se refiere a los ficheros que hay en nuestro ordenador.
@@ -192,16 +192,20 @@ A priori, el uso de git puede parecer muy complejo. En realidad hay muchísimas 
 Las ramas son de uso libre, pero en general deben tener uno de los siguientes usos según wikipedia:
 
 * Master
-Es la rama principal. Contiene el repositorio que se encuentra publicado en producción, por lo que **debe estar siempre estable**.
+
+  > Es la rama principal. Contiene el repositorio que se encuentra publicado en producción, por lo que **debe estar siempre estable**.
 
 * Development
-Es una rama sacada de master. Es la **rama de integración**, todas las nuevas funcionalidades se deben integrar en esta rama. Luego que se realice la integración y se corrijan los errores (en caso de haber alguno), es decir que la rama se encuentre estable, se puede hacer un merge de development sobre la rama master.
+
+  > Es una rama sacada de master. Es la **rama de integración**, todas las nuevas funcionalidades se deben integrar en esta rama. Luego que se realice la integración y se corrijan los errores (en caso de haber alguno), es decir que la rama se encuentre estable, se puede hacer un merge de development sobre la rama master.
 
 * Features
-Cada **nueva funcionalidad** se debe realizar en una rama nueva, específica para esa funcionalidad. Estas se deben sacar de development. Una vez que la funcionalidad esté desarrollada, se hace un merge de la rama sobre development, donde se integrará con las demás funcionalidades.
+
+  > Cada **nueva funcionalidad** se debe realizar en una rama nueva, específica para esa funcionalidad. Estas se deben sacar de development. Una vez que la funcionalidad esté desarrollada, se hace un merge de la rama sobre development, donde se integrará con las demás funcionalidades.
 
 * Hotfix
-Son bugs que surgen en producción, por lo que se deben arreglar y publicar de forma urgente. Es por ello, que son ramas sacadas de master. Una vez corregido el error, se debe hacer un merge de la rama sobre master. Al final, para que no quede desactualizada, se debe realizar el merge de master sobre development (esto es para actualizar development con hotfix).
+
+  > Son bugs que surgen en producción, por lo que se deben arreglar y publicar de forma urgente. Es por ello, que son ramas sacadas de master. Una vez corregido el error, se debe hacer un merge de la rama sobre master. Al final, para que no quede desactualizada, se debe realizar el merge de master sobre development (esto es para actualizar development con hotfix).
 
 #### Conflictos
 
